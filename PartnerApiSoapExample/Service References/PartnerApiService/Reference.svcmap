@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4d3b0b09-1441-46c4-adda-bb5056c22118" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PartnerApiService.disco" MetadataType="Disco" ID="a4c2f598-3a4c-4c88-9ff0-c64ff3798a75" SourceId="1" SourceUrl="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?disco" />
+    <MetadataFile FileName="PartnerApiService.xsd" MetadataType="Schema" ID="65233041-8df9-4d30-8ba8-17b4ae4fdef1" SourceId="1" SourceUrl="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PartnerApiService1.xsd" MetadataType="Schema" ID="34549e0b-384f-4617-9b38-4537fdbc8275" SourceId="1" SourceUrl="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PartnerApiService2.xsd" MetadataType="Schema" ID="f5b3167a-9470-49a0-b6eb-d94ae50ea722" SourceId="1" SourceUrl="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PartnerApiService3.xsd" MetadataType="Schema" ID="008a5b01-4d00-4d91-bcd4-20508717e115" SourceId="1" SourceUrl="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PartnerApiService4.xsd" MetadataType="Schema" ID="8f578fb2-d17c-4bbe-b84f-ecdea255d0f0" SourceId="1" SourceUrl="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PartnerApiService5.xsd" MetadataType="Schema" ID="9a76c1bf-76b1-4ca8-8470-48bb38d4f3b6" SourceId="1" SourceUrl="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PartnerApiService.wsdl" MetadataType="Wsdl" ID="45a884ec-2909-4ce6-946f-f069d8370c1f" SourceId="1" SourceUrl="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

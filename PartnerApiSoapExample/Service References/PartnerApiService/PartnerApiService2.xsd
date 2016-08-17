@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SoapService.Model" />
+  <xs:element name="Grant_GetForApplicationSince">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicationId" type="xs:int" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Grant_GetForApplicationSinceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SoapService.Model" minOccurs="0" name="Grant_GetForApplicationSinceResult" nillable="true" type="q1:ArrayOfGrant" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Application_GetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Application_GetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SoapService.Model" minOccurs="0" name="Application_GetAllResult" nillable="true" type="q2:ArrayOfApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PartnerApiService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Security.Authentication" />
+      <xsd:import schemaLocation="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SoapService.Model" />
+      <xsd:import schemaLocation="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPartnerApiService_Grant_GetForApplicationSince_InputMessage">
+    <wsdl:part name="parameters" element="tns:Grant_GetForApplicationSince" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerApiService_Grant_GetForApplicationSince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Grant_GetForApplicationSinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerApiService_Grant_GetForApplicationSince_InvalidCredentialExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System.Security.Authentication" name="detail" element="q1:InvalidCredentialException" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerApiService_Application_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:Application_GetAll" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerApiService_Application_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Application_GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerApiService_Application_GetAll_InvalidCredentialExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/System.Security.Authentication" name="detail" element="q2:InvalidCredentialException" />
+  </wsdl:message>
+  <wsdl:portType name="IPartnerApiService">
+    <wsdl:operation name="Grant_GetForApplicationSince">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartnerApiService/Grant_GetForApplicationSince" message="tns:IPartnerApiService_Grant_GetForApplicationSince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartnerApiService/Grant_GetForApplicationSinceResponse" message="tns:IPartnerApiService_Grant_GetForApplicationSince_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPartnerApiService/Grant_GetForApplicationSinceInvalidCredentialExceptionFault" name="InvalidCredentialExceptionFault" message="tns:IPartnerApiService_Grant_GetForApplicationSince_InvalidCredentialExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Application_GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartnerApiService/Application_GetAll" message="tns:IPartnerApiService_Application_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartnerApiService/Application_GetAllResponse" message="tns:IPartnerApiService_Application_GetAll_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPartnerApiService/Application_GetAllInvalidCredentialExceptionFault" name="InvalidCredentialExceptionFault" message="tns:IPartnerApiService_Application_GetAll_InvalidCredentialExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPartnerApiService" type="tns:IPartnerApiService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Grant_GetForApplicationSince">
+      <soap:operation soapAction="http://tempuri.org/IPartnerApiService/Grant_GetForApplicationSince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidCredentialExceptionFault">
+        <soap:fault use="literal" name="InvalidCredentialExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Application_GetAll">
+      <soap:operation soapAction="http://tempuri.org/IPartnerApiService/Application_GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidCredentialExceptionFault">
+        <soap:fault use="literal" name="InvalidCredentialExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PartnerApiService">
+    <wsdl:port name="BasicHttpBinding_IPartnerApiService" binding="tns:BasicHttpBinding_IPartnerApiService">
+      <soap:address location="http://partner-api-soap-proxy.azurewebsites.net/PartnerApiService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
